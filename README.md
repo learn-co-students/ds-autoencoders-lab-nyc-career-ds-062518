@@ -197,7 +197,7 @@ In the cell below:
 
 * Store a `Model()` in `deep_encoder`.  In this model, pass in our `input_img` and the last encoder layer  of our deep autoencoder, `encoder_3`.
 * Store an `Input` layer inside of `deep_encoded_input`, and set the `shape` parameter equal to `(encoding_dim,)`
-* Store the last layer from `deep_autoencoder` inside of `deep_decoder_layer` (if you're unsure how to do this, look at how we sliced from the `layers` attribute with the previous autoencoder)
+* Store the decoder layers  from `deep_autoencoder` inside of `deep_decoder_layer`  variables with the appropriate numbers--`deep_decoder_layer_1` should correspond to `deep_autoencoder.layers[-3]`, `deep_decoder_layer_2` should correspond to `deep_autoencoder.layers[-2]`, and `deep_decoder_layer_3` should correspond to `deep_autoencoder.layers[-1]`. 
 * Store another `Model()` unit, this time inside of `deep_decoder`.  Pass in `deep_encoded_input` and `decoder_layer(deep_encoded_input)`
 
 
